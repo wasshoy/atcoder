@@ -1,3 +1,4 @@
+# pythonは再帰呼び出しが余り早くない（らしい）
 import time
 import random
 def merge(left, right):
