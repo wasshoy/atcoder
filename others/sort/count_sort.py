@@ -12,5 +12,5 @@ def count_sort(arr):
     return sort_arr
 
 if __name__ == '__main__':
-    l = [4, 5, 1, 2]
+    l = [4, 5, 1, 2, 19, 12, 32]
     print(*count_sort(l))
