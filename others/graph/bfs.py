@@ -1,4 +1,4 @@
-from collections import defaultdict, deque
+from collections import deque
 
 class Graph:
     def __init__(self, n, directed=False):
@@ -18,7 +18,7 @@ class Graph:
         
         while queue:
             v = queue.popleft()
-            # print(f'v: {v}')
+            print(f'pop v: {v}')
             for i in self.graph[v]:
                 if not visited[i]:
                     queue.append(i)
@@ -32,7 +32,7 @@ def main():
     for _ in range(n-1):
         a, b = map(int, input().split())
         g.add_edge(a-1, b-1)
-    #print(g.graph)
+    print(g.graph)
     g.bfs(1)
     print(g.distance)
     
@@ -46,6 +46,8 @@ N
 a_1 b_1
 ...
 a_N-1 b_N-1
+
+具体例
 
 5
 1 2
