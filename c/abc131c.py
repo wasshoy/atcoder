@@ -1,16 +1,14 @@
-# https://atcoder.jp/contests/abc131/tasks/abc131_c
 import fractions
+def count(n, m, l):
+    c_m = n // m
+    c_l = n // l
+    c_ml = n // (m * l // fractions.gcd(m, l))
+    return n - (c_m + c_l - c_ml)
 
-def main():
-    a, b, c, d = map(int, input().split())
-    # (bまでの条件を満たす数の個数) - (a-1までの条件を満たす数の個数)
-    l =  (c * d) // fractions.gcd(c, d)
-    # 条件: b,cどちらでも割り切れないもの = 全体 - bかcで割り切れるもの
-    cntb = b - ((b // c) + (b // d) - (b // l))
-    cnta = (a-1) - (((a-1) // c) + ((a-1) // d) - ((a-1) // l))
-    ans = cntb - cnta
-
-    print(ans)
-
-if __name__ == '__main__':
-    main()
+a, b, c, d = map(int, input().split())
+b_tar = count(b, c, d)
+a_tar = count(a, c, d)
+is_plus_a = not(bool(a % c == 0 or a % d == 0))
+ans = b_tar - a_tar
+if is_plus_a: ans += 1
+print(ans)
