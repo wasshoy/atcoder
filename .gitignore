@@ -1,5 +1,6 @@
 .DS_Store
 tools/
-.vscode
+honban/
 .python-version
+.vscode
 virtual-con/
