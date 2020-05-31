@@ -16,7 +16,7 @@ class Graph:
     def __init__(self, n, is_directed=False):
         """
         :param n: 頂点数
-        :param is_directed: 
+        :param is_directed: 有向グラフ(True)か無向グラフか(False)
         """
         self.graph = [[] for _ in range(n)]
         self.is_directed = is_directed
@@ -35,7 +35,7 @@ class Graph:
         distances = [INF] * len(self.graph)
         queue = deque([start])
         distances[start] = 0
-        ans = [0] * len(self.graph)
+        # ans = [0] * len(self.graph)
 
         while queue:
             now = queue.popleft()
