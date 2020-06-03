@@ -1,4 +1,4 @@
-from collections import defaultdict, deque
+import math
 import sys
 
 
@@ -13,3 +13,7 @@ def LSR(n): return [LS() for i in range(n)]
 def SRL(n): return [list(S()) for i in range(n)]
 def MSRL(n): return [[int(j) for j in list(S())] for i in range(n)]
 
+
+r, d = LI()
+ans = (math.pi * r ** 2) * (2 * d * math.pi)
+print(ans)
