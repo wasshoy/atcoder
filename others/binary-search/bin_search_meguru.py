@@ -2,10 +2,11 @@
 # 方針
 # left は常に条件を満たさない
 # right は常に条件を満たす
-# right - left = 1になるまで範囲を狭める(最終的にrightが貢献を満たすものの最小になる)
+# right - left = 1になるまで範囲を狭める(最終的にrightが条件を満たすものの最小のインデックスになる)
 
 # 条件を満たすかどうか
 def is_ok(l, i, key):
+    # ここが条件
     if l[i] >= key:
         return True
 
