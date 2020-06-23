@@ -35,9 +35,9 @@ for u, v in edges:
 ans = 0
 # 辺を一本ずつ除いていく
 for u, v in edges:
-    H = deepcopy(g)
-    H[u] -= {v}
-    H[v] -= {u}
-    if not is_connected(H, n):
+    h = deepcopy(g)
+    h[u] -= {v}
+    h[v] -= {u}
+    if not is_connected(h, n):
         ans += 1
 print(ans)
