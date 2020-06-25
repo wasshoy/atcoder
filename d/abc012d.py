@@ -4,7 +4,8 @@
 
 # pythonでの実装： 最小コストで行ける頂点を探す動作を
 # 優先度付きキューをheapqモジュールで実現 (参考： https://nashidos.hatenablog.com/entry/2019/12/28/192207)
-# 優先度付きキュー： 最大最小の探索が O(log N) (リストだとO(N))
+# 優先度付きキュー： 最大最小値の取得が O(log 1) (リストだとO(N))
+# 値の追加/削除がO(log N)
 
 
 import heapq

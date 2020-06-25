@@ -6,7 +6,9 @@
 
 # pythonでの実装： 最小コストで行ける頂点を探す動作を
 # 優先度付きキューをheapqモジュールで実現 (参考： https://nashidos.hatenablog.com/entry/2019/12/28/192207)
-# 優先度付きキュー： 最大最小の探索が O(log N) (リストだとO(N))
+# 優先度付きキュー： 最大/最小値の探索が O(log 1) (リストだとO(N))
+# 要素の追加/削除が O(log N)
+# listのheap化: O(N)
 
 
 import heapq
@@ -30,6 +32,7 @@ def dijkstra(start, g):
             continue
 
         for d, u in g[v]:
+            # v から u に向かうコスト
             temp_c = d + costs[v]
             if temp_c < costs[u]:
                 costs[u] = temp_c
