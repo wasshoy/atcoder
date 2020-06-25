@@ -8,6 +8,13 @@
 - https://atcoder.jp/contests/abc089/tasks/abc089_cs
 - https://atcoder.jp/contests/agc039/tasks/agc039_a
 
+### 緑
+
+- https://atcoder.jp/contests/agc017/tasks/agc017_a
+- https://atcoder.jp/contests/arc008/tasks/arc008_2
+- https://atcoder.jp/contests/abc160/tasks/abc160_d
+- https://atcoder.jp/contests/abc163/tasks/abc163_d
+
 # 解けなかった
 
 ### 茶
