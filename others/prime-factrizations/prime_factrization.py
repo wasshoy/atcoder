@@ -8,9 +8,9 @@
 from collections import Counter
 
 
-def trial_divide(n):
+def prime_factrize(n):
     if n < 2:
-        return
+        return []
     p_factors = []
     # 2だけ先に取り分けておく
     while n % 2 == 0:
@@ -32,6 +32,6 @@ def trial_divide(n):
 
 # 素因数とその個数のタプルのリストを返す
 def get_prime_counts(n):
-    p_factors = trial_divide(n)
+    p_factors = prime_factrize(n)
     counter = Counter(p_factors)
     return list(counter.items())
