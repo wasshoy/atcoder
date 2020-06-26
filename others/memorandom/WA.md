@@ -23,6 +23,7 @@
 - https://atcoder.jp/contests/code-festival-2015-qualb/tasks/codefestival_2015_qualB_c
 - https://atcoder.jp/contests/agc039/tasks/agc039_a
 - https://atcoder.jp/contests/cf17-final/tasks/cf17_final_b
+- https://atcoder.jp/contests/abc166/tasks/abc166_d
 
 ### 緑
 
