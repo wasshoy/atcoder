@@ -7,6 +7,7 @@
 - https://atcoder.jp/contests/abc158/tasks/abc158_d
 - https://atcoder.jp/contests/abc089/tasks/abc089_cs
 - https://atcoder.jp/contests/agc039/tasks/agc039_a
+- https://atcoder.jp/contests/abc051/tasks/abc051_b
 
 ### 緑
 
