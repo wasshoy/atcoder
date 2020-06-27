@@ -8,6 +8,7 @@
 - https://atcoder.jp/contests/abc089/tasks/abc089_cs
 - https://atcoder.jp/contests/agc039/tasks/agc039_a
 - https://atcoder.jp/contests/abc051/tasks/abc051_b
+- https://atcoder.jp/contests/abc143/tasks/abc143_d
 
 ### 緑
 
@@ -25,10 +26,16 @@
 - https://atcoder.jp/contests/agc039/tasks/agc039_a
 - https://atcoder.jp/contests/cf17-final/tasks/cf17_final_b
 - https://atcoder.jp/contests/abc166/tasks/abc166_d
+- https://atcoder.jp/contests/abc143/tasks/abc143_d
+  - [参考](https://drken1215.hatenablog.com/entry/2019/10/20/032700)
 
 ### 緑
 
 - https://atcoder.jp/contests/abc077/tasks/arc084_a
+- https://atcoder.jp/contests/abc142/submissions/me
+  - [参考](https://drken1215.hatenablog.com/entry/2019/10/03/175800)
+- https://atcoder.jp/contests/abc172/tasks/abc172_c
+- https://atcoder.jp/contests/abc172/tasks/abc172_d
 
 ### 青
 
