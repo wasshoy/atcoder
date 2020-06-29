@@ -16,6 +16,8 @@
 - https://atcoder.jp/contests/arc008/tasks/arc008_2
 - https://atcoder.jp/contests/abc160/tasks/abc160_d
 - https://atcoder.jp/contests/abc163/tasks/abc163_d
+- https://atcoder.jp/contests/abc049/tasks/arc065_a
+- https://atcoder.jp/contests/abc125/tasks/abc125_d
 
 # 解けなかった
 
@@ -36,6 +38,8 @@
   - [参考](https://drken1215.hatenablog.com/entry/2019/10/03/175800)
 - https://atcoder.jp/contests/abc172/tasks/abc172_c
 - https://atcoder.jp/contests/abc172/tasks/abc172_d
+- https://atcoder.jp/contests/abc130/tasks/abc130_d
+  - [参考](https://drken1215.hatenablog.com/entry/2019/06/17/004300)
 
 ### 青
 
