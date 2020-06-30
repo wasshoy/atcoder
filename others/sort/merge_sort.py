@@ -1,51 +1,43 @@
-# pythonは再帰呼び出しが余り早くない（らしい）
-import time
-import random
-def merge(left, right):
-    #print('merge {} {}'.format(left, right))
-    merged = []
-    left_i = 0
-    right_i = 0
+# 再帰を利用したソートアルゴリズム
+# 分割した配列をソートし、それら同士をマージすることで並び替える
+# 「分割」 と 「統治」 の処理に分けることができる
+# O(n log n)
+# 空間計算量は O(n)
+def merge_sort(a, left, right):
+    print(f'{(left, right)=}')
+    if right - left == 1:  # 要素数が 1
+        print('要素が 1')
+        return
+    # 分割処理 O(log n)
+    # 配列を左右に分割してそれぞれソート
+    mid = (left + right) // 2
+    print(f'左 : {(left, right, mid)=}')
+    merge_sort(a, left, mid)
+    print(f'右 : {(left, right, mid)=}')
+    merge_sort(a, mid, right)
 
-    while (left_i < len(left) and right_i < len(right)):
-        if left[left_i] <= right[right_i]:
-            merged.append(left[left_i])
-            left_i += 1
+    # 統治処理 O(log n)
+    # それぞれの初めの要素から大小を比較して、小さい方を最終結果の配列に入れていく
+    # 右側を反転させて配列の末尾同士をくっつけた配列を利用する
+    buf = [elem for elem in a[left:mid]]
+    buf += [elem for elem in a[mid:right]]  # 末尾の要素から入れていく
+    # マージ
+    # 左側と右側のポインタ
+    poi_left = 0
+    poi_right = len(buf) - 1
+    for i in range(left, right):  # O(n)
+        # 左側の現在指し示されている要素の方が小さい
+        if buf[poi_left] <= buf[poi_right]:
+            a[i] = buf[poi_left]
+            poi_left += 1
+        # 右側の現在指し示されている要素の方が小さい
         else:
-            merged.append(right[right_i])
-            right_i += 1
-    
-    if left_i < len(left):
-        merged.extend(left[left_i:])
-    if right_i < len(right):
-        merged.extend(right[right_i:])
-        
-    #print('merged = {}'.format(merged))
-    return merged
+            a[i] = buf[poi_right]
+            poi_right -= 1
+    print(f'現在の{a=}')
 
-def merge_sort(l):
-    #print('merge sort {}'.format(l))
-    if len(l) <= 1:
-        #print('return {}'.format(l))
-        return l
-    
-    mid = len(l) // 2
-    left_l = l[:mid]
-    right_l = l[mid:]
 
-    #print('left_l = {}'.format(left_l))
-    left_l  = merge_sort(left_l)
-    #print('right_l = {}'.format(right_l))
-    right_l = merge_sort(right_l)
-
-    return merge(left_l, right_l)
-
-if __name__ == '__main__':
-    #L = [5, 3, 6, 1, 2, 4, 0]
-    N = 10 ** int(input())
-    #print(N)
-    L = [random.randint(1, N) for _ in range(N)]
-    start = time.time()
-    merge_sort(L)
-    end = time.time()
-    print('time: {}[s]'.format(end-start))
+# l = [8, 2, 6, 9, 1, 4, 3, 5]
+l = [2, 1, 4, 3]
+merge_sort(l, 0, len(l))
+print(l)
