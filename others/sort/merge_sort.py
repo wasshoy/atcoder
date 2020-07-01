@@ -3,6 +3,7 @@
 # 「分割」 と 「統治」 の処理に分けることができる
 # O(n log n)
 # 空間計算量は O(n)
+# 内部ソート（外部メモリを必要としない）ではないが、安定ソート（等しい値の場合元の順序を保つソート）である
 def merge_sort(a, left, right):
     print(f'{(left, right)=}')
     if right - left == 1:  # 要素数が 1
@@ -37,7 +38,6 @@ def merge_sort(a, left, right):
     print(f'現在の{a=}')
 
 
-# l = [8, 2, 6, 9, 1, 4, 3, 5]
-l = [2, 1, 4, 3]
+l = [8, 2, 6, 9, 1, 4, 3, 5]
 merge_sort(l, 0, len(l))
 print(l)
