@@ -57,38 +57,17 @@ def main():
     # nCk mod 10 ** 9 + 7 の具体例
     # nCk = n! / ((n - k)! * k!)
     # n!, (n - k)!, k! のそれぞれを逆元を利用計算していく
+    # 計算時間 O(n)
     res = 1
-    # n = 10000, k = 4000
     n = 10000
     k = 4000
-    for i in range(1, n + 1):
+    for i in range(1, n + 1):  # n!
         res = res * i % mod
-    for i in range(1, k + 1):
+    for i in range(1, k + 1):  # k!
         res = res * mod_inv(i, mod) % mod
-    for i in range(1, n - k + 1):
+    for i in range(1, n - k + 1):   # (n - k)!
         res = res * mod_inv(i, mod) % mod
     print(f'{res=}')
-
-    # 16 / 4 ≡ 1 * 4 ≡ 4 ≡ 1 (mod 3)
-    print(mod_inv(4, 3))
-    print((16 % 3) * mod_inv(4, 3) % 3)
-
-    # 28 / 4 ≡ 3 * 4 ≡ 12 ≡ 2 (mod 5)
-    print(mod_inv(4, 5))
-    print((28 % 5)*mod_inv(4, 5) % 5)
-
-    # 45 / 5 ≡ 0 * 2 ≡ 0 (mod 3)
-    print(mod_inv(5, 3))
-    print((45 % 3)*mod_inv(5, 3) % 3)
-
-    # 54 / 7 ≡ 2 * 3 ≡ 6 ≡ 2 (mod 4)
-    print(mod_inv(7, 4))
-    print((54 % 4)*mod_inv(7, 4) % 4)
-
-    # 400 / 4 / 5 ≡ 1 * 2 * 3 ≡ 6 (mod 7)
-    print(mod_inv(4, 7))
-    print(mod_inv(5, 7))
-    print((400 % 7)*mod_inv(4, 7)*mod_inv(5, 7) % 7)
 
 
 main()
