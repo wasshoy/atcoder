@@ -43,6 +43,8 @@
   - [参考](https://drken1215.hatenablog.com/entry/2019/06/17/004300)
 - https://atcoder.jp/contests/abc127/tasks/abc127_d
 - https://atcoder.jp/contests/arc037/tasks/arc037_b
+- https://atcoder.jp/contests/abc076/tasks/abc076_c
+- https://atcoder.jp/contests/abc035/tasks/abc035_c
 
 ### 水
 
