@@ -1,6 +1,6 @@
 def calc_cumsum(l):
-    cumsum = [l[0]]
-    for i in l[1:]:
+    cumsum = [0]
+    for i in l:
         cumsum.append(cumsum[-1] + i)
     return cumsum
 

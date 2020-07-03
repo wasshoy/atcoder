@@ -30,6 +30,7 @@
 - https://atcoder.jp/contests/abc166/tasks/abc166_d
 - https://atcoder.jp/contests/abc143/tasks/abc143_d
   - [参考](https://drken1215.hatenablog.com/entry/2019/10/20/032700)
+- https://atcoder.jp/contests/agc034/tasks/agc034_a
 
 ### 緑
 
@@ -40,6 +41,8 @@
 - https://atcoder.jp/contests/abc172/tasks/abc172_d
 - https://atcoder.jp/contests/abc130/tasks/abc130_d
   - [参考](https://drken1215.hatenablog.com/entry/2019/06/17/004300)
+- https://atcoder.jp/contests/abc127/tasks/abc127_d
+- https://atcoder.jp/contests/arc037/tasks/arc037_b
 
 ### 青
 
