@@ -44,6 +44,10 @@
 - https://atcoder.jp/contests/abc127/tasks/abc127_d
 - https://atcoder.jp/contests/arc037/tasks/arc037_b
 
+### 水
+
+- https://atcoder.jp/contests/abc054/tasks/abc054_c
+
 ### 青
 
 - https://atcoder.jp/contests/abc023/tasks/abc023_d
