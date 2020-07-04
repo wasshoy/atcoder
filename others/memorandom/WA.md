@@ -31,6 +31,7 @@
 - https://atcoder.jp/contests/abc143/tasks/abc143_d
   - [参考](https://drken1215.hatenablog.com/entry/2019/10/20/032700)
 - https://atcoder.jp/contests/agc034/tasks/agc034_a
+- https://atcoder.jp/contests/abc149/tasks/abc149_d
 
 ### 緑
 

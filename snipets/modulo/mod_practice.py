@@ -63,9 +63,9 @@ def main():
     k = 4000
     for i in range(1, n + 1):  # n!
         res = res * i % mod
-    for i in range(1, k + 1):  # k!
+    for i in range(1, k + 1):  # k! ^ (-1)
         res = res * mod_inv(i, mod) % mod
-    for i in range(1, n - k + 1):   # (n - k)!
+    for i in range(1, n - k + 1):   # (n - k)! ^(-1)
         res = res * mod_inv(i, mod) % mod
     print(f'{res=}')
 
