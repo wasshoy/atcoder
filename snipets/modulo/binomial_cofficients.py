@@ -1,16 +1,21 @@
-# 二項係数とは : nCr のこと
+# nCr (mod p) を O(n) で求める
+
+
+# nCr : 二項係数という
 
 # 二項係数の総和 r = 0 ~ n に関する nCr の和
 def sum_n_c_r(n, r):
     return 2 ** n
-# 二項定理より証明可能
+# これは二項定理より証明可能
 
 
 # nCr = n! / ((n - r)! × r!) を愚直に計算するのは n が大きいとつれえわ(mod_practice.py で for 文による愚直な計算を実装)
 # math.factorial を使っても同様に求められるがとて同じこと
-# nCr (mod p) を O(n) で求める
 # 1. n! と 1 / (n - r)! と 1 / r! について 掛け合わせる前に mod p を計算しておく
 # 2. それらをかけ合わせる
+
+# O(n)で計算
+# nCr mod p を 返す
 def n_c_r(n, r, p):
     fact_mod = [1, 1]  # fact_mod[i] : i! mod p
     fact_inv_mod = [1, 1]  # fact_inv_mod[i] : 1 / i! mod p (逆元)

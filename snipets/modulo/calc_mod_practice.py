@@ -15,18 +15,12 @@ def mod_basic():
     # mod m における a の逆元 a^{-1} を計算する
 
 
-# Fermat の小定理 を 用いる方法 ( O(m) バージョン)
+# 愚直な実装 O(m)
 # m が素数である必要がある
 # pow(x, y, m) : x ^ y (mod p) を返す
 def modinv(a, m): return pow(a, m - 2, m)
 
 
-# 拡張 Euclid 互除法を利用する方法
-# m が素数である必要がない
-# O(log m)
-
-# 拡張ユークリッドの互除法
-# 互いに素なa,bについて、a*x+b*y=1の一つの解
 def extgcd(a, b):
     r = [1, 0, a]
     w = [0, 1, b]
@@ -40,8 +34,6 @@ def extgcd(a, b):
     return [w[0], w[1]]
 
 
-# aの逆元(mod m)を求める。(aとmは互いに素であることが前提)
-# O(log p) で計算
 def mod_inv(a, m):
     x = extgcd(a, m)[0]
     return (m + x % m) % m
