@@ -41,6 +41,7 @@ def extgcd(a, b):
 
 
 # aの逆元(mod m)を求める。(aとmは互いに素であることが前提)
+# O(log p) で計算
 def mod_inv(a, m):
     x = extgcd(a, m)[0]
     return (m + x % m) % m
@@ -54,6 +55,7 @@ def main():
     print(mod_inv(a, mod))
     print((a % mod) * mod_inv(b, mod) % mod)
 
+    # 二項係数 (O(n))
     # nCk mod 10 ** 9 + 7 の具体例
     # nCk = n! / ((n - k)! * k!)
     # n!, (n - k)!, k! のそれぞれを逆元を利用計算していく
