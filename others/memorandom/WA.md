@@ -33,6 +33,8 @@
 - https://atcoder.jp/contests/abc149/tasks/abc149_d
 - https://atcoder.jp/contests/agc040/tasks/agc040_a
 - https://atcoder.jp/contests/agc029/tasks/agc029_a
+- https://atcoder.jp/contests/abc116/tasks/abc116_c
+- https://atcoder.jp/contests/abc078/tasks/arc085_a
 
 ### 緑
 
