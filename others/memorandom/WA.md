@@ -35,6 +35,7 @@
 - https://atcoder.jp/contests/agc029/tasks/agc029_a
 - https://atcoder.jp/contests/abc116/tasks/abc116_c
 - https://atcoder.jp/contests/abc078/tasks/arc085_a
+- https://atcoder.jp/contests/aising2020/tasks/aising2020_c
 
 ### 緑
 
