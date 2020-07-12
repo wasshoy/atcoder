@@ -1,5 +1,11 @@
 # 自力で解けなかった問題
 
+## 解けたが時間がかった、考察が雑
+
+### 緑
+
+- https://atcoder.jp/contests/abc148/tasks/abc148_e
+
 ## 解説 AC
 
 ### 茶
