@@ -1,6 +1,6 @@
 # 自力で解けなかった問題
 
-## 解けたが時間がかった、考察が雑
+## 解けたが時間がかった、考察が雑、問題文の意味を捉えられなかった
 
 ### 緑
 
@@ -15,6 +15,8 @@
 - https://atcoder.jp/contests/agc039/tasks/agc039_a
 - https://atcoder.jp/contests/abc051/tasks/abc051_b
 - https://atcoder.jp/contests/abc143/tasks/abc143_d
+- https://atcoder.jp/contests/arc013/tasks/arc013_2
+- https://atcoder.jp/contests/agc022/tasks/agc022_a
 
 ### 緑
 
