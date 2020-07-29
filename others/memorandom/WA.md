@@ -47,6 +47,7 @@
 - https://atcoder.jp/contests/aising2020/tasks/aising2020_c
 - https://atcoder.jp/contests/yahoo-procon2019-qual/tasks/yahoo_procon2019_qual_c
 - https://atcoder.jp/contests/agc013/tasks/agc013_a
+- https://atcoder.jp/contests/agc035/tasks/agc035_a
 
 ### 緑
 
