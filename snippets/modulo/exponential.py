@@ -1,5 +1,5 @@
 # べき乗を O(log n)で計算するアルゴリズム
-# Python は pow で同様の計算を行える
+# Python は pow(x, n) で同様の計算を行える
 # 素因数分解っぽい感じ？
 
 def exp_n(x, n):
