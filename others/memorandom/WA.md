@@ -68,6 +68,7 @@
 - https://atcoder.jp/contests/abc035/tasks/abc035_c
 - https://atcoder.jp/contests/abc121/tasks/abc121_d
 - https://atcoder.jp/contests/abc054/tasks/abc054_b
+- https://atcoder.jp/contests/abc042/tasks/arc058_a
 
 ### 水
 
