@@ -1,15 +1,6 @@
-'use strict';
-
 const main = (arg) => {
-  const input = arg.trim().split('\n');
-  const [a, b, c] = input[0].split(' ');
-  let ans = 0;
-  if (b >= a * c) {
-    ans = c;
-  } else {
-    ans = Math.floor(b / a);
-  }
-  console.log(ans);
+  const lines = arg.trim().split('\n');
+  const N = Number.parseInt(lines[0]);
+  console.log(N % 2 == 0 ? N : 2 * N);
 };
-
 main(require('fs').readFileSync('/dev/stdin', 'utf8'));
