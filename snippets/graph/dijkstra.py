@@ -21,22 +21,22 @@ def LI(): return list(map(int, input().split()))
 
 
 def dijkstra(start, g):
+    # start から 各頂点へ向かう最小コストを返す
     hq = [(0, start)]  # (かかるコスト, 頂点)
     heapq.heapify(hq)
     costs = [float('inf')] * len(g)  # 各頂点の最小コスト
     costs[start] = 0  # 開始地点は 0
     while hq:
         c, v = heapq.heappop(hq)
-        # コストが現在のコストよりも大きければ更新しない
+        # vへ向かうコストが現在のコストよりも大きければ（＝すでにコストが確定した頂点）更新しない
         if c > costs[v]:
             continue
 
         for d, u in g[v]:
-            # v から u に向かうコスト
-            temp_c = d + costs[v]
-            if temp_c < costs[u]:
-                costs[u] = temp_c
-                heapq.heappush(hq, (temp_c, u))
+            # v から u に向かうコストと現時点でのコストを比較
+            if costs[v]+d < costs[u]:
+                costs[u] = costs[v]+d
+                heapq.heappush(hq, (costs[v]+d, u))
     return costs
 
 
