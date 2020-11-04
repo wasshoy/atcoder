@@ -12,36 +12,12 @@ def I(): return int(input())
 def LI(): return list(map(int, input().split()))
 
 
-def warsharll_floyd(d):
-    n = len(d)
-    # ワーシャルフロイド法のアルゴリズム部分
-    for k in range(n):  # iからjへ向かう途中に中継する頂点
+# c[i][j] : 頂点 i から j へ向かう最小コストを返す
+def warshall_floyd(c):
+    n = len(c)  # 頂点数
+    for k in range(n):  # 中継点
         for i in range(n):  # 始点
             for j in range(n):  # 終点
-                # 現時点のiからjへ向かうコスト と kを経由してjに向かうコストの小さい方
-                d[i][j] = min(d[i][j], d[i][k] + d[k][j])
-    return d
-
-
-# abc012dの解法
-def main():
-    n, m = LI()
-    # graph[i][j]: 頂点iとjをつなぐ辺の重み(存在しない場合はinf)
-    graph = [[float("inf") if i != j else 0 for j in range(n)]
-             for i in range(n)]
-    for _ in range(m):
-        a, b, t = LI()
-        a, b = a - 1, b - 1
-        # 無向グラフ
-        graph[a][b] = t
-        graph[b][a] = t
-
-    d = warsharll_floyd(graph)
-    # print(*d, sep='\n')
-    ans = float('inf')
-    for i in range(n):
-        ans = min(ans, max(d[i]))
-    print(ans)
-
-
-main()
+                # 現時点の i から j へ向かうコスト と k を経由して j に向かうコスト の小さい方
+                c[i][j] = min(c[i][j], c[i][k] + c[k][j])
+    return c
