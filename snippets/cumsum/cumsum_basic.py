@@ -1,3 +1,4 @@
+# 配列の累積和を返す関数
 def calc_cumsum(l):
     cumsum = [0]
     for i in l:
