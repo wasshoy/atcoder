@@ -15,7 +15,9 @@ def calc_cumsum(l):
 def imos(a, query):
     n = len(a)
     q = len(query)
-    # 1. 加算処理 : 区間[l, r] に +v => a[l]に + v, a[r + 1]に - v
+    # 1. 加算処理 : 区間[l, r] に +v
+    # => a[l]に +v, a[r + 1]に -v することで実現
+    # 足される範囲の初めと終わりに加算をON/OFFに切り替えるイメージ
     for l, r, v in query:
         a[l] += v
         if r + 1 < n:
@@ -30,6 +32,7 @@ if __name__ == '__main__':
     n = 7  # 要素数
     # q = 3  # クエリ数
     query = [[1, 3, 2], [3, 3, 3], [0, 5, 1]]  # 区間[l, r] の要素に +v するというクエリ
+    # ※ 区間[3, 3] は 3 にのみ加算することを表す
     a = [0] * n  # 配列の初期値 は 全て 0
     ans = imos(a, query)
     print(ans)
