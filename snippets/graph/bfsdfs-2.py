@@ -47,10 +47,10 @@ class Graph:
         que = deque([start])
         dists[start] = 0
         if mode == 'b':
-            # FIFO
+            # FIFO : 幅優先
             get_v = que.popleft
         else:
-            # LIFO
+            # LIFO : 深さ優先
             get_v = que.pop
         while que:
             now_v = get_v()
