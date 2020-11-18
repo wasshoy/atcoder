@@ -1,6 +1,9 @@
 # itertools を使った順列  組み合わせ 直積 の生成
+from scipy.special import comb
 import itertools
 from itertools import combinations_with_replacement
+
+
 a = ['a' 'b', 'c', 'd']
 
 # 順列(permutation)
@@ -23,6 +26,9 @@ r = 3
 combi = list(itertools.combinations(a, r))
 print(f'組み合わせ nC{r}, {len(combi)} 通り')
 print(combi)
+
+# 組み合わせの総数
+print(comb(5, 3, exact=True))  # 5個から 3個を選ぶ場合の数
 
 # 直積(product)
 # 集合 A と集合 B のそれぞれの要素を一つずつ取り出す組み合わせ
