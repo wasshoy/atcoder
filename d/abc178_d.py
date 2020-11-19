@@ -12,34 +12,17 @@ def LS(): return input().split()
 
 
 INF = float('inf')
-
-
-n, q = LI()
-graph = [[] for _ in range(n)]
-for _ in range(n-1):
-    a, b = LI()
-    a, b = a-1, b-1
-    graph[a].append(b)
-    graph[b].append(a)
-
-
-counters = [0] * n
-for _ in range(q):
-    p, x = LI()
-    p -= 1
-    counters[p] += x  # いもす法の加算処理部分
-
-# 深さ優先探索で根から子へ累積和を計算していく
-queue = []
-visited = [False] * n
-queue.append(0)
-visited[0] = True
-while len(queue) > 0:
-    parent = queue.pop()
-    for child in graph[parent]:
-        if not(visited[child]):
-            visited[child] = True
-            counters[child] += counters[parent]
-            queue.append(child)
-
-print(*counters)
+MOD = 10**9 + 7
+s = I()
+# 7 = 3 + 4 = 4 + 3 3通り
+# 9 = 3 + 3 + 3 = 3 + 6 = 4 + 5 = 5 + 4 = 6 + 3 = 9 ６通り
+# 項の条件が 1以上のとき S個のボールの S-1個の間に 0 ~ S-1個の仕切りを入れる場合の数 = 2^(S-1) 通り （仕切りをいれるか・いれないかの ２つ)
+# dp[i] *= 最後に仕切った場所が i であるようなときの個数 ただし、両端も仕切る場所に考える (dp[0] = 1 (S = S))
+# 例 : dp[6] = dp[6 - 3] + dp[3]
+dp = [0] * (s+1)
+dp[0] = 1  # {S}
+for i in range(1, s+1):
+    for j in range(0, (i-3)+1):
+        dp[i] += dp[j]
+        dp[i] %= MOD
+print(dp[s])
