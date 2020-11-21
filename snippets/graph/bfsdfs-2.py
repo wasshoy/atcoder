@@ -1,6 +1,6 @@
 # bfsとdfsを行う事ができるグラフクラス
-# bfs: O(|E|)
-# dfs: O(N + 辺の数)
+# bfs: O(E)
+# dfs: O(V + E)
 # 3.7以降対応
 
 from collections import deque
