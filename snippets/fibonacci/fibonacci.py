@@ -1,8 +1,8 @@
 import sys
 # フィボナッチ数列を計算する
+
+
 # 漸化式通り
-
-
 def fib_base(n):
     if n <= 1:
         return n
