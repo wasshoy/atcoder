@@ -6,5 +6,5 @@ from itertools import product
 foods = ['apple', 'banana', 'chocolate', 'donut', 'egg']
 n = len(foods)
 for bits in product((False, True), repeat=n):
-    selected = [food for food, bit in zip(foods, bit) if bit]
+    selected = [food for food, bit in zip(foods, bits) if bit]
     print(selected)
