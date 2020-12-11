@@ -19,12 +19,12 @@ def bfs(g, start):
     que = deque([start])
     d[start] = 0
     while que:
-        now = que.popleft()
-        for next in g[now]:
-            if d[next] != INF:
+        curr = que.popleft()
+        for nxt in g[curr]:
+            if d[nxt] != INF:
                 continue
-            que.append(next)
-            d[next] = d[now] + 1
+            que.append(nxt)
+            d[nxt] = d[curr] + 1
     return d
 
 
