@@ -12,12 +12,11 @@ def LS(): return input().split()
 
 
 INF = float('inf')
-n = I()
-osturi = 1000 - n  # 最大で 999 円 最小で 1 円
-m = [500, 100, 50, 10, 5, 1]
+# 32
+pay = I()
+change = 1000 - pay
 ans = 0
-for i in m:
-    ans += osturi // i
-    osturi %= i
-
+for coin in (500, 100, 50, 10, 5, 1):
+    ans += change // coin
+    change %= coin
 print(ans)
