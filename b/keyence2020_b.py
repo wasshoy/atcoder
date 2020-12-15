@@ -12,18 +12,19 @@ def LS(): return input().split()
 
 
 INF = float('inf')
+
 n = I()
-# 区間スケジューリング問題 : いくつかの区間の中から重ならないように最大で何個選べるか
-# ソート + 貪欲法 で解ける
-# なるべく多くの数を並べたい -> 短いものを選んでいけば良さそう？
-arm_pos = []
+robots = []
+# [腕の左端, 腕の右端] のリストにする
 for _ in range(n):
-    x, l = LI()
-    arm_pos.append([x - l, x + l])
-arm_pos = sorted(arm_pos, key=lambda x: x[1])  # アームの終点の位置でソート
-ans = n
-for i in range(n - 1):
-    if arm_pos[i][1] > arm_pos[i + 1][0]:  # i のアームの終点が i + 1 のアームの始点 と重なっていた場合
-        arm_pos[i + 1] = arm_pos[i]  # i + 1 のアームを取り除く
-        ans -= 1
+    xi, li = LI()
+    robots.append([xi-li, xi+li])
+robots = sorted(robots, key=lambda x: x[1])  # 腕の右端の位置でソート
+# 区間スケジューリング問題として解く
+curr_x = -10**9 - 10
+ans = 0
+for xs, xt in robots:
+    if curr_x <= xs:
+        ans += 1
+        curr_x = xt
 print(ans)
