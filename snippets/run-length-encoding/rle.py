@@ -1,4 +1,4 @@
-def calc_rle_l(s):
+def calc_rle_l(s: str) -> list:
     '''要素が [文字, 文字数] の リストをかえす'''
     now_c = s[0]
     cnt = 1
