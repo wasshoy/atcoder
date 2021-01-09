@@ -13,7 +13,7 @@ perm = list(itertools.permutations(a))
 print(f'順列 nPn = n!, {len(perm)} 通り')
 print(perm)
 
-# a から r 個だけ選ぶ nPr 通りの順列を生成
+# a から r 個だけ選んで並べる nPr 通りの順列を生成
 r = 3
 perm_3 = list(itertools.permutations(a, r))
 print(f'順列 nP{r}, {len(perm_3)} 通り')

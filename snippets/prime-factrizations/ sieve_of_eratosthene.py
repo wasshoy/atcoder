@@ -1,6 +1,6 @@
 # エラトステネスのふるい : n 以下の全ての素数を列挙
 # 計算量: O(N log log N)
-# n 以下の正の整数のリストを返す
+# n 以下の素数のリストを返す
 def get_primes(n):
     root_n = int(n ** 0.5)
     is_prime = [True] * (n + 1)

@@ -34,6 +34,7 @@ def extgcd(a, b):
     return [w[0], w[1]]
 
 
+# 逆元の計算
 def mod_inv(a, m):
     x = extgcd(a, m)[0]
     return (m + x % m) % m
