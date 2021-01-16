@@ -57,3 +57,7 @@ b : 追加される collection 型オブジェクトの大きさ
 ### 逐次追加 vs 結合
 
 - あんま差はなさそう
+
+## 参考
+
+- [Pythonista なら知らないと恥ずかしい計算量のはなし](https://qiita.com/Hironsan/items/68161ee16b1c9d7b25fb)
