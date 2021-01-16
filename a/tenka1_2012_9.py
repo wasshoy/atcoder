@@ -6,7 +6,7 @@ is_prime[1] = False
 for i in range(2, root+1):
     if not is_prime[i]:
         continue
-    for j in range(2*i, n+1, i):
+    for j in range(2*i, n, i):
         is_prime[j] = False
-ans = len([b for b in is_prime[:-1] if b])
+ans = len([b for b in is_prime if b])
 print(ans)
